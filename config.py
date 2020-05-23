@@ -8,6 +8,8 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = "secret-key"
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProductionConfig(Config):
