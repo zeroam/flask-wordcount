@@ -26,6 +26,7 @@ $ python manage.py db migrate
 $ python manage.py db upgrade
 ```
 
+### RUN
 ```bash
 # worker process
 python worker.py
