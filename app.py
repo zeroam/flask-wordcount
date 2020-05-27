@@ -54,8 +54,8 @@ def count_and_save_words(url):
     try:
         result = Result(
             url=url,
-            result_all=raw_word_count,
-            result_no_stop_words=no_stop_words_count
+            result_all=json.dumps(raw_word_count),
+            result_no_stop_words=json.dumps(no_stop_words_count)
         )
         db.session.add(result)
         db.session.commit()
